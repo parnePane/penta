@@ -1,0 +1,32 @@
+let s = 10;
+
+let circle = {
+  x : 0,
+  y : 0,
+	r : 10
+}
+
+let r = 30;
+let a = 0;
+let dx;
+let dy;
+  
+function setup() {
+  createCanvas(400, 400);
+  background(220);
+  angleMode(DEGREES);
+}
+
+function draw() {
+  translate(200,200);
+  noFill();
+  scale(1,-1);
+  ellipse(circle.x, circle.y, circle.r, circle.r);
+    if (a < 360 ) {
+    a =  a + 72
+  }
+  dx = r * sin(a);
+  dy = r * cos(a);
+  ellipse(dx, dy, 10,10);
+
+}
