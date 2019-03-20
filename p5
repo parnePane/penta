@@ -1,4 +1,3 @@
-let s = 10;
 
 let circle = {
   x : 0,
@@ -22,11 +21,16 @@ function draw() {
   noFill();
   scale(1,-1);
   ellipse(circle.x, circle.y, circle.r, circle.r);
-    if (a < 360 ) {
-    a =  a + 72
-  }
+  poly(72);
   dx = r * sin(a);
   dy = r * cos(a);
   ellipse(dx, dy, 10,10);
 
 }
+
+function poly(x) {
+	if (a < 360 ) {
+    a =  a + x
+  }
+}
+
