@@ -1,36 +1,23 @@
-
-let circle = {
-  x : 0,
-  y : 0,
-	r : 10
-}
-
-let r = 30;
-let a = 0;
-let dx;
-let dy;
-  
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(1280, 800);
   background(220);
   angleMode(DEGREES);
 }
 
 function draw() {
-  translate(200,200);
+  translate(640,400);
   noFill();
   scale(1,-1);
   ellipse(circle.x, circle.y, circle.r, circle.r);
-  poly(72);
-  dx = r * sin(a);
-  dy = r * cos(a);
-  ellipse(dx, dy, 10,10);
-
+  poly(0,0,30,60);
+  poly(0,0,90,30);
+  poly(0,0,180,15);
 }
 
-function poly(x) {
-	if (a < 360 ) {
-    a =  a + x
+function poly(x,y,r,angle) {
+	for (var a = 0; a < 360; a += angle) {
+    x = r * sin(a);
+    y = r * cos(a);
+    point(x,y,);
   }
 }
-
