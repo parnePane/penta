@@ -1,1 +1,31 @@
 
+
+function setup() {
+  createCanvas(1280, 800);
+}
+
+function draw() {
+  translate(width/2,height/2);
+  background(230);
+  rotate(PI/2);
+  // ellipse(0,0,120);
+  strokeWeight(1/9);
+  polyDots(96*2,650);
+  strokeWeight(2);
+  polyDots(96,650);
+  strokeWeight(3);
+  polyDots(48,650);
+  strokeWeight(4);
+  polyDots(24,650);
+}
+
+function polyDots(i,r) {
+  noFill();
+  stroke(0);
+  for (angle = 0; angle < TWO_PI; angle += PI/i) {
+    let radius = r;
+    let dx = radius/2 * cos(angle);
+    let dy = radius/2 * sin(angle);
+    point(dx,dy);
+  }
+}
