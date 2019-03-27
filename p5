@@ -2,7 +2,7 @@ let dx;
 let dy;
 let r =30;
 let a = 0;
-let i = 11;
+let n = 0;
 
 function setup() {
   createCanvas(400, 400);
@@ -11,17 +11,17 @@ function setup() {
 function draw() {
   background(220);
   translate(200,200);
-  
-	poly(40, 3, i);
-  i = i + 0.01;
+  rotate(n);
+  n = n + 1;
+  poly(40, 3);
 }
 
 
 function poly(r,angle,i) {
   strokeWeight(3);
 	for (var a = 0; a < TWO_PI; a += PI/angle) {
-    x = r * sin(a + i);
-    y = r * cos(a + i);
+    x = r * sin(a);
+    y = r * cos(a);
     point(x,y);
     // angle = angle + 0.3;
   }
