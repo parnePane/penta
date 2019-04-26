@@ -7,7 +7,7 @@ function draw() {
   background(230);
   rotate(PI/2);
   strokeWeight(1/9);
-  polyDots(80*2,650);
+  polyDots(160,650);
   strokeWeight(3);
   polyDots(40,650);
   strokeWeight(4);
@@ -17,7 +17,7 @@ function draw() {
 function polyDots(i,r) {
   noFill();
   stroke(0);
-  for (angle = 0; angle < TWO_PI; angle += PI/i) {
+  for (angle = 0; angle < TWO_PI; angle += TWO_PI/i) {
     let radius = r;
     let dx = radius/2 * cos(angle);
     let dy = radius/2 * sin(angle);
